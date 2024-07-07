@@ -14,6 +14,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "jest": "^29.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -23,7 +24,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "init-msw": "msw init public/"
+    "init-msw": "msw init public/",
+    "test": "jest --watchAll"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.1.4",
