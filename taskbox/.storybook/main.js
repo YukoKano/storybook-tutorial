@@ -1,31 +1,15 @@
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
-  stories: ["../src/components/**/*.stories.js"],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   staticDirs: ["../public"],
-
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/preset-create-react-app",
     "@storybook/addon-interactions",
-    "@chromatic-com/storybook"
   ],
-
-  features: {
-    postcss: false,
-  },
-
   framework: {
-    name: "@storybook/nextjs",
-    options: {}
+    name: "@storybook/react-vite",
+    options: {},
   },
-
-  core: {},
-
-  docs: {},
-
-  typescript: {
-    reactDocgen: "react-docgen-typescript"
-  }
 };
 export default config;
