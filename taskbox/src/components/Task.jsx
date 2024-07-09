@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Task({
   task: { id, title, state },
   onArchiveTask,
@@ -44,3 +46,16 @@ export default function Task({
     </div>
   );
 }
+
+// このコンポーネントが誤って使用されると開発中に警告を出す（これがなかったので↑で'missing in props validation'エラーが出ていた）
+// TypeScriptなどの型システムを使ってコンポーネントプロパティの型を作成することもできる
+Task.propTypes = {
+  // Composition of the task
+  task: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
+  }),
+  onArchiveTask: PropTypes.func,
+  onPinTask: PropTypes.func,
+};
