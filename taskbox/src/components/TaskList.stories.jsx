@@ -18,7 +18,7 @@ export const MockedState = {
   error: null,
 };
 
-const Mockstore = ({ taskboxState, children }) => {
+const Mockstore = ({ taskboxState, children }) => (
   <Provider
     store={configureStore({
       reducer: {
@@ -39,8 +39,8 @@ const Mockstore = ({ taskboxState, children }) => {
     })}
   >
     {children}
-  </Provider>;
-};
+  </Provider>
+);
 
 export default {
   component: TaskList,
@@ -98,9 +98,9 @@ export const Loading = {
   // },
   decorators: [
     (story) => (
-      <MockedState taskboxState={{ ...MockedState, status: "loading" }}>
+      <Mockstore taskboxState={{ ...MockedState, status: "loading" }}>
         {story()}
-      </MockedState>
+      </Mockstore>
     ),
   ],
 };
