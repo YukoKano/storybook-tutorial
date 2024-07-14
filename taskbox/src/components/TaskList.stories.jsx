@@ -1,4 +1,5 @@
 import TaskList from "./TaskList";
+import PropTypes from "prop-types";
 
 import * as TaskStories from "./Task.stories"; // これがあることで最小限に済む
 
@@ -117,4 +118,19 @@ export const Empty = {
       </Mockstore>
     ),
   ],
+};
+
+Mockstore.propTypes = {
+  taskboxState: PropTypes.shape({
+    tasks: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        state: PropTypes.string,
+      })
+    ).isRequired,
+    status: PropTypes.string.isRequired,
+    error: PropTypes.string,
+  }).isRequired,
+  children: PropTypes.node.isRequired,
 };
