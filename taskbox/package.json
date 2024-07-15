@@ -22,15 +22,16 @@
     "build": "vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "test-storybook": "test-storybook",
     "build-storybook": "storybook build",
-    "init-msw": "msw init public/"
+    "init-msw": "msw init public/",
+    "test-storybook": "test-storybook"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.1.4",
     "@storybook/addon-interactions": "^8.1.4",
     "@storybook/addon-links": "^8.1.4",
     "@storybook/blocks": "^8.1.4",
+    "@storybook/core-common": "^8.2.3",
     "@storybook/react": "^8.1.4",
     "@storybook/react-vite": "^8.1.4",
     "@storybook/test": "^8.1.4",
