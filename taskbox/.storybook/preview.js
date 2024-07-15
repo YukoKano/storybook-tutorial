@@ -1,5 +1,8 @@
 import "../src/index.css";
 
+import { initialize, mswLoader } from "msw-storybook-addon"; // Mock Service Workerの略
+initialize();
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
@@ -10,6 +13,7 @@ const preview = {
       },
     },
   },
+  loaders: [mswLoader],
 };
 
 export default preview;
