@@ -1,14 +1,15 @@
-name: 'Chromatic Deployment'
+name: "Chromatic Deployment"
 
 on: push
 
 jobs:
   chromatic:
-    name: 'Run Chromatic'
+    name: "Run Chromatic"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: fetch-depth: 0
+        with:
+          fetch-depth: 0
       - run: yarn
       - uses: chromaui/action@latest
         with:
