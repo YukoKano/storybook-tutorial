@@ -1,0 +1,23 @@
+🩺 The doctor is checking the health of your Storybook..
+╭ Duplicated dependencies found ──────────────────────────────────────────────────────────────────╮
+│                                                                                                 │
+│   Attention: The following dependencies are duplicated which might cause unexpected behavior:   │
+│   @storybook/core-common:                                                                       │
+│   8.2.4, 8.2.3                                                                                  │
+│                                                                                                 │
+│   @storybook/preview-api:                                                                       │
+│   8.2.4, 8.2.3                                                                                  │
+│                                                                                                 │
+│                                                                                                 │
+│   Please try de-duplicating these dependencies by running yarn dedupe                           │
+│                                                                                                 │
+│                                                                                                 │
+│   You can find more information for a given dependency by running yarn why <package-name>       │
+│                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You can always recheck the health of your project by running:
+npx storybook doctor
+
+Full logs are available in /Users/you/Documents/projects/storybook-tutorial/taskbox/doctor-storybook.log
+
