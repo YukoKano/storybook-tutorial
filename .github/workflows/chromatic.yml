@@ -13,5 +13,5 @@ jobs:
       - run: yarn
       - uses: chromaui/action@latest
         with:
-          projectToken: ${{secret.CHROMATIC_PROJECT_TOKEN}}
-          token: ${{secret.GITHUB_TOKEN}}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.STORYBOOK_GITHUB_TOKEN }}
